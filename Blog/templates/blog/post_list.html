@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Blog</title>
-</head>
-<body>
-	<div>
-		<h1><a href="">iKenshu Blog</a></h1>
-	</div>
-	
+{% extends "blog/base.html" %}
+
+{% block content %}
 	{% for post in posts %}
-		<div>
-			<p>{{ post.published_date }}</p>
-			<h2><a href="">{{ post.title }}</a></h2>
+		<div class="Post">
+			<div class="date">{{ post.published_date }}</div class="date">
+			<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
 			<p> {{post.text|linebreaks }}</p>
 		</div>
 	{% endfor %}
-</body>
-</html>
+{% endblock content %}

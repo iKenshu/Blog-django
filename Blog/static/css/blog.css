@@ -1,0 +1,51 @@
+body {
+	font-family: 'Lora', sans-serif
+}
+
+h1 a {
+	color: #3BB873;
+}
+
+.Header {
+	background-color: #384137;
+	margin-top: 0;
+	padding: 20px 20px 20px 40px;
+}
+
+.Header h1, .Header h1 a, .Header h1 a:visited, .Header h1 a:active {
+	color: #94ED88;
+	font-size: 36pt;
+	text-decoration: none;
+}
+
+.content {
+	margin-left: 40px;
+}
+
+.date {
+	float: right;
+	color: #828282;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
