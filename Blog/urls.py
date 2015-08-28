@@ -1,10 +1,10 @@
 from django.conf.urls import url
 
-from . import views
+from .views import BaseView, PostListView, PostDetailView, PostUpdateView, PostCreateView
 
 urlpatterns = [
-	url(r'^$', views.post_list, name='post_list'),
-	url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),
-	url(r'^post/new/$', views.post_new, name="post_new"),
-	url(r'^post/(?P<pk>[0-9]+)/edit/$', views.post_edit, name='post_edit'),
+	url(r'^$', PostListView.as_view(), name='post_list'),
+	url(r'^post/(?P<pk>[0-9]+)/$', PostDetailView.as_view(), name='post_detail'),
+	url(r'^post/new/$', PostCreateView.as_view(), name="post_new"),
+	url(r'^post/(?P<pk>[0-9]+)/edit/$', PostUpdateView.as_view(), name='post_edit'),
 ]
