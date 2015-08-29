@@ -30,8 +30,14 @@ class PostCreateView(CreateView):
 	model = Post
 	fields = ['title', 'text']
 
+	def form_valid(self, form):
+		form.instance.author = self.request.user
+		form.instance.published_date = timezone.now()
+		return super(PostCreateView, self).form_valid(form)
+
 	def get_success_url(self):
 		return reverse('post_detail', kwargs={'pk': self.object.pk})
+
 
 """
 def post_new(request):
