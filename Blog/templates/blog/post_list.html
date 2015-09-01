@@ -2,9 +2,10 @@
 
 {% block content %}
 	{% for post in object_list %}
-		<div class="Post">
+		<div class="Post-container">
 			<div class="date">{{ post.published_date }}</div class="date">
-			<h1><a href={% url 'post_detail' pk=post.pk %}>{{ post.title }}</a></h1>
+			<h1 class="Post-title"><a class="Post-link" href={% url 'post_detail' pk=post.pk %}>{{ post.title }}</a></h1>
+			<span class="Post-author">Published by {{ post.author }}</span>
 			<p> {{post.text|linebreaks }}</p>
 		</div>
 	{% endfor %}

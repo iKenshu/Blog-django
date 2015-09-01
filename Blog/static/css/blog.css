@@ -1,5 +1,5 @@
 body {
-	font-family: 'Lora', sans-serif
+	font-family: 'Roboto', sans-serif;
 }
 
 h1 a {
@@ -8,20 +8,29 @@ h1 a {
 
 .Header {
 	background-color: #384137;
-	margin-top: 0;
-	padding: 20px 20px 20px 40px;
+	text-align: center;
+	padding: 2em 1em;
 }
 
-.Header h1, .Header h1 a, .Header h1 a:visited, .Header h1 a:active {
+.Header-title{
 	color: #94ED88;
-	font-size: 36pt;
+	font-size: 2em;
 	text-decoration: none;
 }
-
-.content {
-	margin-left: 40px;
+.Post {
+	padding: 0 8em;
 }
 
+.Post-title {
+	margin: 1em 0 0 0;
+}
+.Post-link {
+	text-decoration: none;
+}
+.Post-author {
+	font-size: .8em;
+	color: #828282;
+}
 .date {
 	float: right;
 	color: #828282;
